@@ -1,1 +1,11 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.title {
+	font-family: "Garamond";
+	font-weight: 700;
+	@include adaptiveValue("font-size", 48, 30);
+	line-height: 1.2;
+	text-align: center;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 80, 40);
+	}
+}

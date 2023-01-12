@@ -1,3 +1,284 @@
 //====================================================================================================
+.home-page {
+	// .home-page__main
+	&__main {
+		height: 100vh;
+		@include adaptiveValue("margin-bottom", 120, 80);
+	}
+	// .home-page__about
+	&__about {
+		@include adaptiveValue("margin-bottom", 95, 80);
+	}
+	// .home-page__services
+	&__services {
+		@include adaptiveValue("margin-bottom", 150, 80);
+	}
+	// .home-page__clients
+	&__clients {
+		@include adaptiveValue("margin-bottom", 168, 80);
+	}
+	// .home-page__work
+	&__work {
+		@include adaptiveValue("margin-bottom", 100, 80);
+	}
+}
 
 //====================================================================================================
+.main-home-page {
+	position: relative;
+	&__image-ibg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+	// .main-home-page__container
+	&__container {
+		position: relative;
+		z-index: 22;
+		@include adaptiveValue("padding-top", 260, 200);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 70%;
+		@include adaptiveValue("row-gap", 290, 200);
+	}
+	// .main-home-page__title
+	&__title {
+		font-family: "Garamond";
+		font-weight: 700;
+		@include adaptiveValue("font-size", 72, 40);
+		line-height: 1.2;
+		max-width: rem(550);
+	}
+	// .main-home-page__footer
+	&__footer {
+		font-weight: 700;
+		line-height: 1.4;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: rem(20);
+		&::before {
+			content: "";
+			display: inline-block;
+			width: rem(20);
+			height: rem(30);
+			background: url("@img/icon/mouse.svg") 0 0/100% no-repeat;
+			animation: scroll 1s infinite ease alternate;
+		}
+		@keyframes scroll {
+			0% {
+			}
+			100% {
+				transform: translate(0px, 5px);
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.about-home-page {
+	// .about-home-page__container
+	&__container {
+		max-width: rem(890);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	// .about-home-page__title
+	&__title {
+		display: flex;
+		@include adaptiveValue("width", 80, 50);
+		@include adaptiveValue("height", 64, 44);
+
+		background: url("@img/icon/“.svg") 0 0/100% no-repeat;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 20);
+		}
+	}
+	// .about-home-page__text
+	&__text {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(25);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 27, 16);
+		line-height: 130%;
+	}
+}
+
+//========================================================================================================================================================
+
+.services-home-page {
+	// .services-home-page__container
+	&__container {
+	}
+	// .services-home-page__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		@include adaptiveValue("row-gap", 80, 40);
+		column-gap: rem(44);
+		padding-right: rem(20);
+		@media (max-width: em(865)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: em(487)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .services-home-page__card
+	&__card {
+		position: relative;
+	}
+	// .services-home-page__image-ibg
+	&__image-ibg {
+		padding-bottom: percent(300, 396);
+		@include adaptiveValue("margin-bottom", 30, 15);
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			border: 1px solid rgba(205, 170, 125, 0.5);
+			width: 100%;
+			height: 100%;
+			top: -7%;
+			left: 6%;
+		}
+	}
+	// .services-home-page__title
+	&__title {
+		font-family: "Garamond";
+		line-height: 1.2;
+		@include adaptiveValue("font-size", 30, 18);
+		@media (max-width: em(487)) {
+			font-size: rem(30);
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.clients-home-page {
+	// .clients-home-page__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		column-gap: rem(10);
+		row-gap: rem(30);
+	}
+	// .clients-home-page__image-ibg
+	&__image-ibg {
+		flex: 1 1 24%;
+		height: rem(108);
+		opacity: 0.5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: em(580)) {
+			flex: 1 1 45%;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.work-home-page {
+	// .work-home-page__container
+	&__container {
+	}
+
+	// .work-home-page__tabs
+	&__tabs {
+	}
+	// .work-home-page__navigation
+	&__navigation {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: rem(10);
+		@include adaptiveValue("column-gap", 60, 20);
+		justify-content: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 20);
+		}
+	}
+	// .work-home-page__title
+	&__title {
+		font-size: rem(24);
+		line-height: 1.3;
+		transition: all 0.3s ease 0s;
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: rem(1);
+			background-color: $goldColor;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease 0s;
+		}
+	}
+	// .work-home-page__content
+	&__content {
+	}
+	// .work-home-page__body
+	&__body {
+	}
+	// .work-home-page__table
+	&__table {
+	}
+}
+
+// ._tab-active
+._tab-active {
+	color: $goldColor;
+	&::after {
+		content: "";
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.galery {
+	// .galery__body
+	&__body {
+	}
+	// .galery__item
+	&__item {
+	}
+	// .galery__images
+	&__images {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		// @media (max-width: em(480)) {
+		// 	grid-template-columns: 1fr;
+		// }
+		@include adaptiveValue("gap", 24, 12);
+	}
+	// .galery__image
+	&__image {
+		@include adaptiveValue("width", 416, 232, 0, 1330, 768);
+		@include adaptiveValue("height", 416, 232, 0, 1330, 768);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("width", 360, 140, 0, 768, 320);
+			@include adaptiveValue("height", 360, 140, 0, 768, 320);
+		}
+		// @media (max-width: em(480)) {
+		// 	@include adaptiveValue("width", 180, 140, 0, 500, 320);
+		// 	@include adaptiveValue("height", 180, 140, 0, 500, 320);
+		// }
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

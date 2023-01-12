@@ -12,7 +12,7 @@
 */
 
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
-window['FLS'] = true;
+window["FLS"] = true;
 
 // Підключення основного файлу стилів
 import "../scss/style.scss";
@@ -30,7 +30,7 @@ flsFunctions.isWebp();
 /* Додавання loaded для HTML після повного завантаження сторінки */
 // flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Враховування плаваючої панелі на мобільних пристроях при 100vh */
 // flsFunctions.fullVHfix();
 
@@ -46,7 +46,7 @@ flsFunctions.isWebp();
 Документація: https://template.fls.guru/template-docs/modul-taby.html
 Сніппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "Показати ще"
@@ -191,7 +191,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Функціонал додавання класів до хедеру під час прокручування
 // Документація: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-// flsScroll.headerScroll();
+flsScroll.headerScroll();
 
 // Функціонал липкого блоку
 // flsScroll.stickyBlock();
@@ -209,7 +209,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 Документація плагіна: https://www.lightgalleryjs.com/docs/
 Сніппет(HTML):
 */
-// import "./files/gallery.js";
+import "./files/gallery.js";
 
 // ========================================================================================================================================================================================================================================================
 // Інші плагіни ============================================================================================================================================================================================================================================================================================================
@@ -217,7 +217,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 /* Динамічний адаптив */
 // Документація: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 /* Форматування чисел */
 // import './libs/wNumb.min.js';

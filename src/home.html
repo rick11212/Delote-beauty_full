@@ -1,12 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"HomePage"
+	"title":"Delote-Beauty"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main class="home-page">
+				<section class="home-page__main main-home-page">
+					<div class="main-home-page__image-ibg"><img src="@img/bgc.jpg" alt="picture"></div>
+					<div class="main-home-page__container">
+						<h1 class="main-home-page__title">Салон красоты «Delote-Beauty» на Крестовском</h1>
+						<div class="main-home-page__footer">Прокрутите вниз</div>
+					</div>
+				</section>
+				<article class="home-page__about about-home-page">
+					<div class="about-home-page__container">
+						<div class="about-home-page__title"></div>
+						<div class="about-home-page__text">
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu nibh vitae amet. Ipsum, pharetra donec ornare velit. Id at quisque accumsan risus ac ipsum ut. Sit elit, facilisi proin non malesuada sociis tristique. Viverra augue lorem ut quisque quam tortor, malesuada iaculis. </p>
+							<p>Et elementum at nulla venenatis, faucibus integer. Auctor neque eros, viverra rutrum. Fames ultrices condimentum tortor nec penatibus. Velit imperdiet sapien fringilla vestibulum sit fames.</p>
+						</div>
+					</div>
+				</article>
+				<section class="home-page__services services-home-page">
+					<div class="services-home-page__container">
+						<div class="services-home-page__cards">
+							<div class="services-home-page__card">
+								<div class="services-home-page__image-ibg"><img src="@img/services/01.jpg" alt="services"></div>
+								<h5 class="services-home-page__title">Парикмахерские услуги</h5>
+							</div>
+							<div class="services-home-page__card">
+								<div class="services-home-page__image-ibg"><img src="@img/services/02.jpg" alt="services"></div>
+								<h5 class="services-home-page__title">Маникюр</h5>
+							</div>
+							<div class="services-home-page__card">
+								<div class="services-home-page__image-ibg"><img src="@img/services/03.jpg" alt="services"></div>
+								<h5 class="services-home-page__title">Педикюр</h5>
+							</div>
+							<div class="services-home-page__card">
+								<div class="services-home-page__image-ibg"><img src="@img/services/04.jpg" alt="services"></div>
+								<h5 class="services-home-page__title">Косметология</h5>
+							</div>
+							<div class="services-home-page__card">
+								<div class="services-home-page__image-ibg"><img src="@img/services/05.jpg" alt="services"></div>
+								<h5 class="services-home-page__title">Эстетист по телу</h5>
+							</div>
+							<div class="services-home-page__card">
+								<div class="services-home-page__image-ibg"><img src="@img/services/06.jpg" alt="services"></div>
+								<h5 class="services-home-page__title">Визаж</h5>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="home-page__clients clients-home-page">
+					<div class="clients-home-page__container">
+						<div class="clients-home-page__image-ibg clients-home-page__image-ibg_contain"><img src="@img/clients/01.svg" alt=""></div>
+						<div class="clients-home-page__image-ibg clients-home-page__image-ibg_contain"><img src="@img/clients/02.svg" alt=""></div>
+						<div class="clients-home-page__image-ibg clients-home-page__image-ibg_contain"><img src="@img/clients/03.svg" alt=""></div>
+						<div class="clients-home-page__image-ibg clients-home-page__image-ibg_contains"><img src="@img/clients/04.svg" alt=""></div>
+					</div>
+				</section>
+				<section class="home-page__work work-home-page">
+					<div class="work-home-page__container">
+						<div class="work-home-page__label title">Наши работы</div>
+						<div data-tabs class="work-home-page__tabs">
+							<nav data-tabs-titles class="work-home-page__navigation">
+								<button type="button" class="work-home-page__title _tab-active">Показать все</button>
+								<button type="button" class="work-home-page__title">Парикмахерские услуги</button>
+								<button type="button" class="work-home-page__title">Маникюр</button>
+								<button type="button" class="work-home-page__title">Педикюр</button>
+							</nav>
+							<div data-tabs-body class="work-home-page__content">
+								<div class="work-home-page__body">
+									<div class="work-home-page__table galery">
+										<div class="galery__body">
+											<div data-gallery id="lightgallery-1" class="galery__images">
+												<a class="galery__image" href="@img/work/big/01.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/01.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/02.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/02.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/03.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/03.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/04.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/04.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/05.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/05.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/06.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/06.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/07.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/07.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/08.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/08.jpg" />
+												</a>
+												<a class="galery__image" href="@img/work/big/09.jpg">
+													<img alt="North Miami Beach, FL 33162" src="@img/work/09.jpg" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="work-home-page__body">
+									<div data-gallery id="lightgallery-1" class="galery__images">
+										<a class="galery__image" href="@img/work/big/05.jpg">
+											<img alt="North Miami Beach, FL 33162" src="@img/work/05.jpg" />
+										</a>
+										<a class="galery__image" href="@img/work/big/06.jpg">
+											<img alt="North Miami Beach, FL 33162" src="@img/work/06.jpg" />
+										</a>
+										<a class="galery__image" href="@img/work/big/08.jpg">
+											<img alt="North Miami Beach, FL 33162" src="@img/work/08.jpg" />
+										</a>
+										<a class="galery__image" href="@img/work/big/09.jpg">
+											<img alt="North Miami Beach, FL 33162" src="@img/work/09.jpg" />
+										</a>
+									</div>
+								</div>
+								<div class="work-home-page__body">
+									<div data-gallery id="lightgallery-1" class="galery__images">
+										<a class="galery__image" href="@img/work/big/03.jpg">
+											<img alt="North Miami Beach, FL 33162" src="@img/work/03.jpg" />
+										</a>
+										<a class="galery__image" href="@img/work/big/07.jpg">
+											<img alt="North Miami Beach, FL 33162" src="@img/work/07.jpg" />
+										</a>
+									</div>
+								</div>
+								<div class="work-home-page__body">
+									<div data-gallery id="lightgallery-1" class="galery__images">
+										<a class="galery__image" href="@img/work/big/03.jpg">
+											<img alt="North Miami Beach, FL 33162" src="@img/work/03.jpg" />
+										</a>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

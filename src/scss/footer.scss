@@ -1,3 +1,86 @@
 //====================================================================================================
+.footer {
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	@include adaptiveValue("padding-top", 80, 20);
+	@include adaptiveValue("padding-bottom", 30, 20);
+	// .footer__container
+	&__container {
+	}
+	// .footer__columns
+	&__columns {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		column-gap: rem(20);
+		row-gap: rem(40);
+		@include adaptiveValue("font-size", 18, 14);
+		@include adaptiveValue("margin-bottom", 80, 20);
+	}
+	// .footer__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(15);
+		@media (max-width: em(865)) {
+			&:nth-child(1) {
+				flex: 1 1 100%;
+				align-items: center;
+			}
+		}
+	}
+	// .footer__logo
+	&__logo {
+		width: rem(60);
+		height: rem(60);
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	// .footer__title
+	&__title {
+		font-family: "Garamond";
+		font-weight: 700;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: 1.2;
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .footer__item
+	&__item {
+		line-height: 1.3;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $goldColor;
+			}
+		}
+	}
+
+	// .footer__inst
+	&__inst {
+		width: rem(36);
+		height: rem(36);
+		background: url("@img/insta.svg") 0 0/100% no-repeat;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: url("@img/insta-gold.svg") 0 0/100% no-repeat;
+			}
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("padding-top", 30, 20);
+		font-weight: 700;
+		line-height: 1.4;
+		color: rgba(255, 255, 255, 0.5);
+		text-align: center;
+	}
+	&__bottom {
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+	}
+}
 
 //====================================================================================================
