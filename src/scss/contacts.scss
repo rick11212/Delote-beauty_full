@@ -1,0 +1,51 @@
+.contacts-page {
+	// .contacts-page__main
+	&__main {
+		@include adaptiveValue("padding-top", 180, 150);
+	}
+	// .contacts-page__contacts
+	&__contacts {
+	}
+}
+.main-contacts-page {
+	// .main-contacts-page__title
+	&__title {
+	}
+	// .main-contacts-page__map
+	&__map {
+		@include adaptiveValue("height", 576, 400);
+		@include adaptiveValue("width", 1296, 290);
+		width: rem(1296);
+		@include adaptiveValue("margin-bottom", 80, 40);
+	}
+}
+
+.contacts {
+	// .contacts__columns
+	&__columns {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		column-gap: rem(20);
+		row-gap: rem(40);
+		@include adaptiveValue("font-size", 18, 14);
+		@include adaptiveValue("margin-bottom", 80, 20);
+	}
+	// .contacts__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(15);
+		justify-content: center;
+		align-items: center;
+		@media (max-width: em(960)) {
+			flex: 1 1 48%;
+		}
+	}
+	// .contacts__title
+	&__title {
+	}
+	// .contacts__item
+	&__item {
+	}
+}

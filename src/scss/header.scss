@@ -175,6 +175,11 @@
 		@include adaptiveValue("row-gap", 60, 40);
 	}
 
+	.spollers__title {
+		@media (max-width: em(374)) {
+			font-size: rem(15);
+		}
+	}
 	&__text {
 		@media (max-width: $mobile) {
 			font-size: rem(14);
@@ -183,6 +188,9 @@
 
 	&__item {
 		transition: all 0.3s ease 0s;
+		@media (max-width: em(374)) {
+			font-size: rem(14);
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: $goldColor;
@@ -226,6 +234,9 @@
 		&:hover::before,
 		&:hover::after {
 			background-color: $goldColor;
+		}
+		&:hover span {
+			left: 0%;
 		}
 	}
 	@media (any-hover: none) {

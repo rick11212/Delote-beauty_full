@@ -74,6 +74,10 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: rem(10);
+		@include adaptiveValue("width", 400, 250, 0, 1330, 768);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("width", 600, 220, 0, 767, 320);
+		}
 	}
 	// .price__name
 	&__name {
